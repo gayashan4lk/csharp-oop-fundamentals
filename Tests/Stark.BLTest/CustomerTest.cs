@@ -79,5 +79,37 @@ namespace Stark.BLTest
             // Assert
             Assert.AreEqual(3, Customer.InstanceCount);
         }
+
+        [TestMethod]
+        public void ValidateValid()
+        {
+            // Arrange
+            Customer customer = new Customer
+            {
+                LastName = "Potts",
+                Email = "potts@stark.com"
+            };
+
+            // Act
+            
+            // Assert
+            Assert.AreEqual(true, customer.Validate());
+
+        }
+
+        [TestMethod]
+        public void ValidateMissingLastName()
+        {
+            // Arrange
+            Customer customer = new Customer
+            {
+                Email = "potts@stark.com"
+            };
+
+            // Act
+
+            // Assert
+            Assert.AreEqual(false, customer.Validate());
+        }
     }
 }

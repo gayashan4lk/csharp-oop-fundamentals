@@ -46,7 +46,26 @@ namespace Stark.BL
         public string Email { get; set; }
 
         public static int InstanceCount { get; set; }
-        
 
+        public bool Validate()
+        {
+            bool isValid = (String.IsNullOrWhiteSpace(LastName) || String.IsNullOrWhiteSpace(Email)) ? false : true;
+            return isValid;
+        }
+        
+        public bool Save()
+        {
+            return true;
+        }
+
+        public Customer Retrieve(int customerId)
+        {
+            return new Customer();
+        }
+
+        public List<Customer> Retrieve()
+        {
+            return new List<Customer>();
+        }
     }
 }
