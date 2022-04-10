@@ -17,8 +17,8 @@ namespace Stark.BL
 
         public int CustomerId { get; private set; }
         public string FirstName { get; set; }
-        private string lastName;
 
+        private string lastName;
         public string LastName
         {
             get { return lastName; }
@@ -27,7 +27,20 @@ namespace Stark.BL
 
         public string FullName
         {
-            get { return LastName + ", " + FirstName; }
+            get
+            {
+                string fullName = FirstName;
+                if (!String.IsNullOrEmpty(LastName))
+                {
+                    fullName = LastName + ", " + fullName;
+                }
+                if(String.IsNullOrEmpty(FirstName))
+                {
+                    fullName = LastName;
+                }
+
+                return fullName;
+            }
         }
         public string Email { get; set; }
         
