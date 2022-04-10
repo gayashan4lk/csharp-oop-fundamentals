@@ -21,12 +21,12 @@ namespace Stark.BLTest
                 LastName = "Stark"
             };
             string expected = "Tony Stark";
-            
 
             // Act
-
+            string actual = customer.FullName;
 
             // Assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }
