@@ -20,7 +20,7 @@ namespace Stark.BLTest
                 FirstName = "Tony",
                 LastName = "Stark"
             };
-            string expected = "Tony Stark";
+            string expected = "Stark, Tony";
 
             // Act
             string actual = customer.FullName;

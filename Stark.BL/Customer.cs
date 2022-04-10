@@ -27,7 +27,7 @@ namespace Stark.BL
 
         public string FullName
         {
-            get { return LastName + "," + FirstName; }
+            get { return LastName + ", " + FirstName; }
         }
         public string Email { get; set; }
         
