@@ -18,6 +18,7 @@ namespace Stark.BL
         public int CustomerId { get; private set; }
         public string FirstName { get; set; }
 
+        // full decleration of Lastname field
         private string lastName;
         public string LastName
         {
@@ -43,6 +44,8 @@ namespace Stark.BL
             }
         }
         public string Email { get; set; }
+
+        public static int InstanceCount { get; set; }
         
 
     }

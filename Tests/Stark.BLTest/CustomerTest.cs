@@ -62,5 +62,22 @@ namespace Stark.BLTest
             // Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void InstancesTest()
+        {
+            // Arrange
+            Customer.InstanceCount = 0;
+            Customer ob1 = new Customer();
+            Customer.InstanceCount++;
+            Customer ob2 = new Customer();
+            Customer.InstanceCount++;
+            Customer ob3 = new Customer();
+            Customer.InstanceCount++;
+
+            // Act
+
+            // Assert
+            Assert.AreEqual(3, Customer.InstanceCount);
+        }
     }
 }
