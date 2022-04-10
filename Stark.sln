@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.32228.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stark.BL", "Stark.BL\Stark.BL.csproj", "{27DF3CA7-A5DC-49DF-B71F-1D2AA3AA7CA4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{08A4686B-E67E-4F8D-B561-83F18C556745}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stark.BLTest", "Tests\Stark.BLTest\Stark.BLTest.csproj", "{625CA2A0-3BA7-4958-AFF0-72EBC0A013B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{27DF3CA7-A5DC-49DF-B71F-1D2AA3AA7CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27DF3CA7-A5DC-49DF-B71F-1D2AA3AA7CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27DF3CA7-A5DC-49DF-B71F-1D2AA3AA7CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{625CA2A0-3BA7-4958-AFF0-72EBC0A013B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625CA2A0-3BA7-4958-AFF0-72EBC0A013B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625CA2A0-3BA7-4958-AFF0-72EBC0A013B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625CA2A0-3BA7-4958-AFF0-72EBC0A013B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{625CA2A0-3BA7-4958-AFF0-72EBC0A013B1} = {08A4686B-E67E-4F8D-B561-83F18C556745}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAF09705-6290-4EB6-ADEE-7435F40EB175}
