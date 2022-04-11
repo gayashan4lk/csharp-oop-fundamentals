@@ -8,6 +8,13 @@ namespace Stark.BL
 {
     public class CustomerRepository
     {
+        public CustomerRepository()
+        {
+            addressRepository = new AddressRepository();
+        }
+
+        private AddressRepository addressRepository { get; set; };
+
         public Customer Retrieve(int customerId)
         {
             Customer customer = new Customer(1);
@@ -17,6 +24,7 @@ namespace Stark.BL
                 customer.Email = "pepperpotts@stark.com";
                 customer.FirstName = "Pepper";
                 customer.LastName = "Potts";
+                customer.AddressList = addressRepository.RetrieveByCustomerId(customerId).ToList();
             }
             return customer;
         }
