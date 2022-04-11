@@ -18,11 +18,12 @@ namespace Stark.BL
         }
 
         public int OrderId { get; private set; }
-        public DateTime OrderDate { get; set; }
+        public DateTimeOffset? OrderDate { get; set; }
 
         public bool Validate()
         {
-            return true;
+            bool IsValid = (OrderDate == null) ? false : true ;
+            return IsValid;
         }
 
         public Order Retrieve(int orderId)

@@ -24,10 +24,7 @@ namespace Stark.BL
 
         public bool Validate()
         {
-            bool isValid = true;
-
-            isValid = (string.IsNullOrWhiteSpace(ProductName) || CurrentPrice == null) ? false : true;
-
+            bool isValid = (string.IsNullOrWhiteSpace(ProductName) || CurrentPrice == null) ? false : true;
             return isValid;
         }
 
