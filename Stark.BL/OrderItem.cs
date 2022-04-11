@@ -17,15 +17,12 @@ namespace Stark.BL
             OrderItemIt = orderItemId;
         }
 
-        public int OrderItemIt { get; private set; }
+        public int OrderItemId { get; private set; }
         public int ProductId { get; set; }
         public decimal? PurchasePrice { get; set; }
         public int Quantity { get; set; }
 
-        public OrderItem Retrieve(int orderItemId)
-        {
-            return new OrderItem();
-        }
+        
 
         public bool Validate()
         {
@@ -33,10 +30,7 @@ namespace Stark.BL
             return isValid;
         }
 
-        public bool Save()
-        {
-            return true;
-        }
+        
 
     }
 }
