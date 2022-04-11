@@ -18,13 +18,17 @@ namespace Stark.BL
         }
 
         public int ProductId { get; private set; }
-        public string ProdcutName { get; set; }
+        public string ProductName { get; set; }
         public string Description { get; set; }
-        public double CurrentPrice { get; set; }
+        public decimal? CurrentPrice { get; set; }
 
         public bool Validate()
         {
-            return true;
+            bool isValid = true;
+
+            isValid = (string.IsNullOrWhiteSpace(ProductName) || CurrentPrice == null) ? false : true;
+
+            return isValid;
         }
 
         public Product Retrieve(int productId)
