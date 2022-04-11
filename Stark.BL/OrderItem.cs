@@ -14,7 +14,7 @@ namespace Stark.BL
 
         public OrderItem(int orderItemId)
         {
-            OrderItemIt = orderItemId;
+            OrderItemId = orderItemId;
         }
 
         public int OrderItemId { get; private set; }

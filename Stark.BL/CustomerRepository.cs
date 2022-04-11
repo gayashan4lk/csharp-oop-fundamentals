@@ -13,7 +13,7 @@ namespace Stark.BL
             addressRepository = new AddressRepository();
         }
 
-        private AddressRepository addressRepository { get; set; };
+        private AddressRepository addressRepository { get; set; }
 
         public Customer Retrieve(int customerId)
         {
