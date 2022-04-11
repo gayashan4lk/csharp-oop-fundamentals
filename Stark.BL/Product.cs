@@ -27,21 +27,5 @@ namespace Stark.BL
             bool isValid = (string.IsNullOrWhiteSpace(ProductName) || CurrentPrice == null) ? false : true;
             return isValid;
         }
-
-        public Product Retrieve(int productId)
-        {
-            return new Product();
-        }
-
-
-        public List<Product> Retrieve()
-        {
-            return new List<Product>();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
     }
 }
