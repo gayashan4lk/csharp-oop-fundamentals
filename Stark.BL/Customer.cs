@@ -8,12 +8,14 @@ namespace Stark.BL
 {
     public class Customer
     {
-        /*private string _lastName;
-        public string LastName
+        public Customer()
         {
-            get { return _lastName; }
-            set { _lastName = value; }
-        }*/
+        }
+
+        public Customer(int customerId)
+        {
+            CustomerId = customerId;
+        }
 
         public int CustomerId { get; private set; }
         public string FirstName { get; set; }
