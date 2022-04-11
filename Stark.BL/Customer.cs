@@ -8,17 +8,19 @@ namespace Stark.BL
 {
     public class Customer
     {
-        public Customer()
+        public Customer(): this(0) // Calling Customer(int customerId) contructor
         {
         }
 
         public Customer(int customerId)
         {
             CustomerId = customerId;
+            AddressList = new List<Address>();
         }
 
         public int CustomerId { get; private set; }
         public string FirstName { get; set; }
+        public List<Address> AddressList { get; set; }
 
         // full decleration of Lastname field
         private string lastName;
