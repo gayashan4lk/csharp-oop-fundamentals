@@ -18,6 +18,10 @@ namespace Stark.BL
                 product.Description = "Second version of Iron man suit";
                 product.CurrentPrice = 15.96M;
             }
+            Object myObject = new object();
+            Console.WriteLine($"Object: { myObject.ToString() }");
+            Console.WriteLine($"Product: { product.ToString() }");
+
             return product;
         }
 

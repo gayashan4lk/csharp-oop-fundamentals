@@ -52,6 +52,8 @@ namespace Stark.BL
 
         public static int InstanceCount { get; set; }
 
+        public override string ToString() => FullName;
+
         public bool Validate()
         {
             bool isValid = (String.IsNullOrWhiteSpace(LastName) || String.IsNullOrWhiteSpace(Email)) ? false : true;
