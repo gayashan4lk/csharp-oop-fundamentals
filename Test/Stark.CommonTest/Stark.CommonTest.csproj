@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Stark.BL\Stark.BL.csproj">
+      <Project>{27DF3CA7-A5DC-49DF-B71F-1D2AA3AA7CA4}</Project>
+      <Name>Stark.BL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Stark.Common\Stark.Common.csproj">
       <Project>{52B2F5AD-C664-4FBF-905F-C5AE1176716D}</Project>
       <Name>Stark.Common</Name>

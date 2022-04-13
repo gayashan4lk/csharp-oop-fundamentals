@@ -29,9 +29,9 @@ namespace Stark.BL
 
         public override string ToString() => $"{OrderDate.Value.Date} ({OrderId})";
 
-        public bool Validate()
+        public override bool Validate()
         {
-            bool IsValid = (OrderDate == null) ? false : true ;
+            bool IsValid = (OrderDate == null) ? false : true;
             return IsValid;
         }
     }

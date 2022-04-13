@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stark.Common
 {
-    internal class LoggingService
+    public class LoggingService
     {
         public static void WriteToFile(List<ILoggable> itemsList)
         {
