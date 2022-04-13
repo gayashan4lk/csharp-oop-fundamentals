@@ -18,8 +18,16 @@ namespace Stark.BL
         public bool HasChanges { get; set; }
         public bool IsValid
         {
-            get { return true; }
+            get { return Validate(); }
         }
+
+        public abstract bool Validate();
+
+        /*public bool Validate()
+        {
+            return true;
+        }*/
+
         public EntityStateOption EntityState { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace Stark.BL
         {
             Order order = new Order(orderId);
 
-            if(orderId == 10)
+            if(orderId == 101)
             {
                 order.OrderDate = DateTimeOffset.UtcNow;
             }

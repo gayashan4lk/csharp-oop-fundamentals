@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stark.BL
 {
-    public class Product
+    public class Product : EntityBase
     {
         public Product()
         {
@@ -27,7 +27,7 @@ namespace Stark.BL
             return ProductName;
         }
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = (string.IsNullOrWhiteSpace(ProductName) || CurrentPrice == null) ? false : true;
             return isValid;
