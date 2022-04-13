@@ -21,5 +21,20 @@ namespace Stark.CommonTest
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void InsertSpacesTestWithExistingSpace()
+        {
+            // Arrange
+            var source = "Ingco Screwdriver";
+            var expected = "Ingco Screwdriver";
+            var handler = new StringHandler();
+
+            // Act
+            var actual = handler.InsertSpaces(source);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
