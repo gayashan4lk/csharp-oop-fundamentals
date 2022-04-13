@@ -13,6 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stark.Common", "Stark.Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stark.CommonTest", "Test\Stark.CommonTest\Stark.CommonTest.csproj", "{B1674B67-E7C2-4258-9DF3-5CA0EB440B73}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B7CDE9CF-2BF2-4E45-A397-6D82A9C050B8}"
+	ProjectSection(SolutionItems) = preProject
+		tutorial-info.txt = tutorial-info.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
