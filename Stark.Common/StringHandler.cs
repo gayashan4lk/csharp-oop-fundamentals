@@ -8,5 +8,22 @@ namespace Stark.Common
 {
     public class StringHandler
     {
+        public string InsertSpaces (string text)
+        {
+            string result = String.Empty;
+
+            if (!String.IsNullOrWhiteSpace(text))
+            {
+                foreach (char c in text)
+                {
+                    if (char.IsUpper(c))
+                    {
+                        result += " ";
+                    }
+                    result += c;
+                }
+            }
+            return result;
+        }
     }
 }
