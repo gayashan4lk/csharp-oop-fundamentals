@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Stark.Common;
 
 namespace Stark.BL
 {
-    public class Order
+    public class Order : EntityBase, ILoggable
     {
         public Order() : this(0)
         {
@@ -23,6 +24,8 @@ namespace Stark.BL
         public DateTimeOffset? OrderDate { get; set; }
         public List<OrderItem> OrderItems { get; set; }
         public int ShippingAddressId { get; set; }
+
+        public string Log() => $"{OrderId}: Date: {this.OrderDate.Value.Date} Status: {this.EntityState.ToString()}";
 
         public override string ToString() => $"{OrderDate.Value.Date} ({OrderId})";
 

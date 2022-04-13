@@ -8,7 +8,14 @@ namespace Stark.Common
 {
     public static class StringHandler
     {
-        public static string InsertSpaces (string text)
+        // public static string InsertSpaces (string text)
+
+        /// <summary>
+        /// Inserts spaces before each capital letter in a string
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public static string InsertSpaces (this string text)
         {
             string result = String.Empty;
 

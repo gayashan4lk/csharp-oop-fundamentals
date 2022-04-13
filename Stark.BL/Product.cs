@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stark.BL
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         public Product()
         {
@@ -26,7 +26,8 @@ namespace Stark.BL
             get 
             {
                 //var stringHandler = new StringHandler();
-                return StringHandler.InsertSpaces(productName);
+                //return StringHandler.InsertSpaces(productName);
+                return productName.InsertSpaces();
             }
             set { productName = value; }
         }
@@ -40,6 +41,8 @@ namespace Stark.BL
         {
             return ProductName;
         }
+
+        public string Log() => $"{ProductId}: {ProductName} Detail: {Description} Status: {EntityState.ToString()}";
 
         public override bool Validate()
         {

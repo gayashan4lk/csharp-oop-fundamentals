@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using Stark.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Stark.BL
 {
-    public class Customer
+    public class Customer : EntityBase, ILoggable
     {
         public Customer(): this(0) // Calling Customer(int customerId) contructor
         {
@@ -52,9 +53,11 @@ namespace Stark.BL
 
         public static int InstanceCount { get; set; }
 
+        public string Log() => $"{CustomerId}: {FullName} Email: {Email} Status: {EntityState.ToString()}";
+
         public override string ToString() => FullName;
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = (String.IsNullOrWhiteSpace(LastName) || String.IsNullOrWhiteSpace(Email)) ? false : true;
             return isValid;

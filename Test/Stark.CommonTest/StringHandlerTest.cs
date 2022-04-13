@@ -16,7 +16,8 @@ namespace Stark.CommonTest
             //var handler = new StringHandler();
 
             // Act
-            var actual = StringHandler.InsertSpaces(source);
+            //var actual = StringHandler.InsertSpaces(source);
+            var actual = source.InsertSpaces();
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -31,7 +32,8 @@ namespace Stark.CommonTest
             //var handler = new StringHandler();
 
             // Act
-            var actual = StringHandler.InsertSpaces(source);
+            //var actual = StringHandler.InsertSpaces(source);
+            var actual = source.InsertSpaces();
 
             // Assert
             Assert.AreEqual(expected, actual);
