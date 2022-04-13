@@ -13,10 +13,10 @@ namespace Stark.CommonTest
             // Arrange
             var source = "IngcoScrewdriver";
             var expected = "Ingco Screwdriver";
-            var handler = new StringHandler();
+            //var handler = new StringHandler();
 
             // Act
-            var actual = handler.InsertSpaces(source);
+            var actual = StringHandler.InsertSpaces(source);
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -28,10 +28,10 @@ namespace Stark.CommonTest
             // Arrange
             var source = "Ingco Screwdriver";
             var expected = "Ingco Screwdriver";
-            var handler = new StringHandler();
+            //var handler = new StringHandler();
 
             // Act
-            var actual = handler.InsertSpaces(source);
+            var actual = StringHandler.InsertSpaces(source);
 
             // Assert
             Assert.AreEqual(expected, actual);

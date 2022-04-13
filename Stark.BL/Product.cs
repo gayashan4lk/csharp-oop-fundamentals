@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stark.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,20 @@ namespace Stark.BL
         }
 
         public int ProductId { get; private set; }
-        public string ProductName { get; set; }
+
+        private string productName;
+        public string ProductName
+        {
+            get 
+            {
+                //var stringHandler = new StringHandler();
+                return StringHandler.InsertSpaces(productName);
+            }
+            set { productName = value; }
+        }
+
+
+
         public string Description { get; set; }
         public decimal? CurrentPrice { get; set; }
 

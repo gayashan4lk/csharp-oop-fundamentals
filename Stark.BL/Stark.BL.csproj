@@ -54,5 +54,11 @@
     <Compile Include="ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Stark.Common\Stark.Common.csproj">
+      <Project>{52b2f5ad-c664-4fbf-905f-c5ae1176716d}</Project>
+      <Name>Stark.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

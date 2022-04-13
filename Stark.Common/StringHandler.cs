@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Stark.Common
 {
-    public class StringHandler
+    public static class StringHandler
     {
-        public string InsertSpaces (string text)
+        public static string InsertSpaces (string text)
         {
             string result = String.Empty;
 
