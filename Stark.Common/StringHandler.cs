@@ -18,6 +18,7 @@ namespace Stark.Common
                 {
                     if (char.IsUpper(c) && text.IndexOf(c) != 0)
                     {
+                        result = result.Trim();
                         result += " ";
                     }
                     result += c;
