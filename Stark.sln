@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stark.BLTest", "Tests\Stark
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stark.Common", "Stark.Common\Stark.Common.csproj", "{52B2F5AD-C664-4FBF-905F-C5AE1176716D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stark.CommonTest", "Test\Stark.CommonTest\Stark.CommonTest.csproj", "{B1674B67-E7C2-4258-9DF3-5CA0EB440B73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +31,17 @@ Global
 		{52B2F5AD-C664-4FBF-905F-C5AE1176716D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52B2F5AD-C664-4FBF-905F-C5AE1176716D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52B2F5AD-C664-4FBF-905F-C5AE1176716D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1674B67-E7C2-4258-9DF3-5CA0EB440B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1674B67-E7C2-4258-9DF3-5CA0EB440B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1674B67-E7C2-4258-9DF3-5CA0EB440B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1674B67-E7C2-4258-9DF3-5CA0EB440B73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{625CA2A0-3BA7-4958-AFF0-72EBC0A013B1} = {08A4686B-E67E-4F8D-B561-83F18C556745}
+		{B1674B67-E7C2-4258-9DF3-5CA0EB440B73} = {08A4686B-E67E-4F8D-B561-83F18C556745}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAF09705-6290-4EB6-ADEE-7435F40EB175}

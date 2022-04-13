@@ -16,7 +16,7 @@ namespace Stark.Common
             {
                 foreach (char c in text)
                 {
-                    if (char.IsUpper(c))
+                    if (char.IsUpper(c) && text.IndexOf(c) != 0)
                     {
                         result += " ";
                     }
