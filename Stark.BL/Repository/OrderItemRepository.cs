@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Stark.BL.Models;
 
-namespace Stark.BL
+namespace Stark.BL.Repository
 {
     public class OrderItemRepository
     {
@@ -12,7 +8,7 @@ namespace Stark.BL
         {
             OrderItem item = new OrderItem(orderItemId);
 
-            if(orderItemId == 101)
+            if (orderItemId == 101)
             {
                 item.ProductId = 1;
                 item.PurchasePrice = (decimal?)25.25;

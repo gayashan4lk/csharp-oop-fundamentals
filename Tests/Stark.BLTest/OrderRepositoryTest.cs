@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Stark.BL.Models;
+using Stark.BL.Repository;
 using System;
-using Stark.BL;
 
 namespace Stark.BLTest
 {
@@ -20,7 +21,6 @@ namespace Stark.BLTest
             // Act
             Order actual = orderRepository.Retrieve(101);
             
-
             // Assert
             Assert.AreEqual(expected.OrderId, actual.OrderId);
             Assert.AreEqual(expected.OrderDate, actual.OrderDate);

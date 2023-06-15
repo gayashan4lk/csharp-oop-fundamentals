@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Stark.BL.Models;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Stark.BL
+namespace Stark.BL.Repository
 {
     public class CustomerRepository
     {
@@ -19,7 +16,7 @@ namespace Stark.BL
         {
             Customer customer = new Customer(1);
 
-            if(customerId == 1)
+            if (customerId == 1)
             {
                 customer.Email = "pepperpotts@stark.com";
                 customer.FirstName = "Pepper";

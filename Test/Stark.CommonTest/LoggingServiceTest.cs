@@ -1,8 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
+using Stark.BL.Models;
 using Stark.Common;
-using Stark.BL;
+using System.Collections.Generic;
 
 namespace Stark.CommonTest
 {

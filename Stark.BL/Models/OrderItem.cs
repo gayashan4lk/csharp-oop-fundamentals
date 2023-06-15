@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Stark.BL
+﻿namespace Stark.BL.Models
 {
     public class OrderItem
     {
@@ -22,15 +16,10 @@ namespace Stark.BL
         public decimal? PurchasePrice { get; set; }
         public int Quantity { get; set; }
 
-        
-
         public bool Validate()
         {
-            bool isValid = (Quantity <= 0 || ProductId <= 0 || PurchasePrice == null) ? false : true;
+            bool isValid = Quantity <= 0 || ProductId <= 0 || PurchasePrice == null ? false : true;
             return isValid;
         }
-
-        
-
     }
 }
