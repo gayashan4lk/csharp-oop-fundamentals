@@ -1,11 +1,8 @@
-﻿using System;
+﻿using Stark.Common;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Stark.Common;
 
-namespace Stark.BL
+namespace Stark.BL.Models
 {
     public class Order : EntityBase, ILoggable
     {
@@ -25,13 +22,13 @@ namespace Stark.BL
         public List<OrderItem> OrderItems { get; set; }
         public int ShippingAddressId { get; set; }
 
-        public string Log() => $"{OrderId}: Date: {this.OrderDate.Value.Date} Status: {this.EntityState.ToString()}";
+        public string Log() => $"{OrderId}: Date: {OrderDate.Value.Date} Status: {EntityState}";
 
         public override string ToString() => $"{OrderDate.Value.Date} ({OrderId})";
 
         public override bool Validate()
         {
-            bool IsValid = (OrderDate == null) ? false : true;
+            bool IsValid = OrderDate == null ? false : true;
             return IsValid;
         }
     }

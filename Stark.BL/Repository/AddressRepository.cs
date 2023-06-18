@@ -1,10 +1,7 @@
-﻿using System;
+﻿using Stark.BL.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Stark.BL
+namespace Stark.BL.Repository
 {
     public class AddressRepository
     {
@@ -12,7 +9,7 @@ namespace Stark.BL
         {
             Address address = new Address();
 
-            if(addressId == 1)
+            if (addressId == 1)
             {
                 address.AddressType = 1;
                 address.AddressLine1 = "Bag End";

@@ -1,11 +1,6 @@
 ﻿using Stark.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Stark.BL
+namespace Stark.BL.Models
 {
     public class Product : EntityBase, ILoggable
     {
@@ -23,7 +18,7 @@ namespace Stark.BL
         private string productName;
         public string ProductName
         {
-            get 
+            get
             {
                 //var stringHandler = new StringHandler();
                 //return StringHandler.InsertSpaces(productName);
@@ -32,21 +27,19 @@ namespace Stark.BL
             set { productName = value; }
         }
 
-
-
         public string Description { get; set; }
         public decimal? CurrentPrice { get; set; }
+
+        public string Log() => $"{ProductId}: {ProductName} Detail: {Description} Status: {EntityState}";
 
         public override string ToString()
         {
             return ProductName;
         }
 
-        public string Log() => $"{ProductId}: {ProductName} Detail: {Description} Status: {EntityState.ToString()}";
-
         public override bool Validate()
         {
-            bool isValid = (string.IsNullOrWhiteSpace(ProductName) || CurrentPrice == null) ? false : true;
+            bool isValid = string.IsNullOrWhiteSpace(ProductName) || CurrentPrice == null ? false : true;
             return isValid;
         }
     }

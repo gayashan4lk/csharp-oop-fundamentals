@@ -1,10 +1,8 @@
-﻿using System;
+﻿using Stark.BL.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Stark.BL
+namespace Stark.BL.Repository
 {
     public class ProductRepository
     {
@@ -12,20 +10,23 @@ namespace Stark.BL
         {
             Product product = new Product(productId);
 
-            if(productId == 2)
+            if (productId == 2)
             {
                 product.ProductName = "Mark_2";
                 product.Description = "Second version of Iron man suit";
                 product.CurrentPrice = 15.96M;
             }
-            Object myObject = new object();
-            Console.WriteLine($"Object: { myObject.ToString() }");
-            Console.WriteLine($"Product: { product.ToString() }");
+            object myObject = new object();
+            Console.WriteLine($"Object: {myObject}");
+            Console.WriteLine($"Product: {product}");
 
             return product;
         }
 
-
+        /// <summary>
+        /// Method overloading
+        /// </summary>
+        /// <returns></returns>
         public List<Product> Retrieve()
         {
             return new List<Product>();

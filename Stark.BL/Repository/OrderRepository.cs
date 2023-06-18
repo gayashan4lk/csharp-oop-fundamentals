@@ -1,10 +1,8 @@
-﻿using System;
+﻿using Stark.BL.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Stark.BL
+namespace Stark.BL.Repository
 {
     public class OrderRepository
     {
@@ -12,7 +10,7 @@ namespace Stark.BL
         {
             Order order = new Order(orderId);
 
-            if(orderId == 101)
+            if (orderId == 101)
             {
                 order.OrderDate = DateTimeOffset.UtcNow;
             }

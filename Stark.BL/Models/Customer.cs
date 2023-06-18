@@ -1,15 +1,11 @@
-﻿using System;
+﻿using Stark.Common;
 using System.Collections.Generic;
-using Stark.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Stark.BL
+namespace Stark.BL.Models
 {
     public class Customer : EntityBase, ILoggable
     {
-        public Customer(): this(0) // Calling Customer(int customerId) contructor
+        public Customer() : this(0) // Calling Customer(int customerId) contructor
         {
         }
 
@@ -25,25 +21,25 @@ namespace Stark.BL
         public List<Address> AddressList { get; set; }
 
         // full decleration of Lastname field
-        private string lastName;
+        private string _lastName;
         public string LastName
         {
-            get { return lastName; }
-            set { lastName = value; }
+            get { return _lastName; }
+            set { _lastName = value; }
         }
 
         public string FullName
         {
             get
             {
-                string fullName = FirstName;
-                if (!String.IsNullOrEmpty(LastName))
+                string fullName = LastName;
+                if (!string.IsNullOrWhiteSpace(FirstName))
                 {
-                    fullName = LastName + ", " + fullName;
-                }
-                if(String.IsNullOrEmpty(FirstName))
-                {
-                    fullName = LastName;
+                    if (!string.IsNullOrWhiteSpace(_lastName))
+                    {
+                        fullName += ", ";
+                    }
+                    fullName += FirstName;
                 }
 
                 return fullName;
@@ -53,13 +49,13 @@ namespace Stark.BL
 
         public static int InstanceCount { get; set; }
 
-        public string Log() => $"{CustomerId}: {FullName} Email: {Email} Status: {EntityState.ToString()}";
+        public string Log() => $"{CustomerId}: {FullName} Email: {Email} Status: {EntityState}";
 
         public override string ToString() => FullName;
 
         public override bool Validate()
         {
-            bool isValid = (String.IsNullOrWhiteSpace(LastName) || String.IsNullOrWhiteSpace(Email)) ? false : true;
+            bool isValid = string.IsNullOrWhiteSpace(LastName) || string.IsNullOrWhiteSpace(Email) ? false : true;
             return isValid;
         }
     }
